@@ -34,12 +34,17 @@
 // }
 
 // variables.less
-$theme-primary: #F05F40;
+$theme-primary: #067187;
 $theme-dark: #222;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "mixins",
         "base",
-        "form"
+        "form",
+        "features",
+        "contact",
+        "how"
 ;

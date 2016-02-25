@@ -245,11 +245,13 @@ header {
         .header-content-inner {
             h1 {
                 font-weight: 500;
+                font-size : 45px !important;
                 text-transform: uppercase;
                 margin-top: 0;
                 margin-bottom: 0;
             }
             h2 {
+                font-size : 29px ;
                 margin-bottom: 50px;
             }
             h3 {
@@ -453,8 +455,8 @@ header {
 }
 
 footer {
-  padding-top: 0;
-  padding-bottom: 100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 // Extras

@@ -410,7 +410,8 @@ header {
 }
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
+    @include button-variant(white, $theme-medium, $theme-medium);
+    background-color: none;
 }
 
 .btn {

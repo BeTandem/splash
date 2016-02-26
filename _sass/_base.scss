@@ -240,7 +240,7 @@ header {
         z-index: 2;
         position: relative;
         text-align: center;
-        padding: 100px 15px 50px;
+        padding: 100px 15px 0px;
         width: 100%;
         .header-content-inner {
             h1 {
@@ -265,7 +265,8 @@ header {
             p {
                 font-weight: 300;
                 font-size: 21px;
-                margin-bottom: 50px;
+                /*margin-bottom: 50px;*/
+                margin-bottom: 0;
             }
         }
     }
@@ -308,8 +309,16 @@ header {
                     margin-left: auto;
                     margin-right: auto;
                 }
+                /*h1 {*/
+                  /*font-size: 40px !important;*/
+                /*}*/
             }
         }
+    }
+    @media (max-width: 768px) {
+      .header-content .header-content-inner h1 {
+        font-size: 40px !important;
+      }
     }
 }
 
@@ -419,6 +428,7 @@ header {
     border: none;
     font-weight: 700;
     text-transform: uppercase;
+    padding: 9px 12px;
 }
 
 .btn-xl {

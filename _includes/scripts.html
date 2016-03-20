@@ -13,6 +13,7 @@
 <script src="js/creative.js"></script>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="js/graph.js"></script>
+<script src="http://www.youtube.com/player_api"></script>
 
 <!-- Google Analytics -->
 <script>
@@ -23,5 +24,45 @@
 
   ga('create', 'UA-74070402-1', 'auto');
   ga('send', 'pageview');
+
+
+//mixpanel subscribe
+$(window).ready(function(){
+    $("#mc-embedded-subscribe").click(function() {
+        mixpanel.track("SignUpLinkClicked");
+    });
+});
+
+//mixpanel clicked email
+$(window).ready(function(){
+  $("#mce-EMAIL").click(function() {
+      mixpanel.track("EmailBox");
+  });
+});
+
+//mixpanel video
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+          height: '275',
+          width: '400',
+          playerVars: {rel: 0, showinfo: 0},
+          videoId: 'vzgM92p8Bmw',
+          events: {
+            'onStateChange': videoEvent
+          }
+        });
+    }
+
+    var replay = 0;
+    function videoEvent(event) {
+        if(event.data === 0) {
+            mixpanel.track("Video End");
+        }
+        else if (event.data === 1 && replay === 0) {
+                mixpanel.track("Video Play");
+                replay = 1;
+        }
+    }
 
 </script>
